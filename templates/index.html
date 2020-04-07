@@ -7,20 +7,96 @@
 {% block body %}
 
 <div class="main-card">
-    <div class="image">
-        <img src="static/coroners-report-seppuku.jpg" alt="">
+    <div class="title-box">
+        <h1 class="title">Covid-19</h1>
     </div>
 
     <div class="info">
-        <div class="date">
-            <span>Sunday</span>
-            <span>March 15th 2020</span>
+        <div class="info-header">
+            <span>Number of Cases in the US:</span>
         </div>
-        <h1 class="title">Covid-19 Cases in the U.S.A</h1>
-        <p class="placeholder">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius nihil doloribus praesentium labore quasi tenetur beatae consequatur magni, reiciendis quis omnis quidem eaque officiis corporis odio quia recusandae.
-        </p>
-        <a href="#">Important link</a>
+        <div class="case-count">
+            <h2>1,344,849</h2>
+        </div>
+
+        <div class="sub-info">
+            <div class="inline">
+                <div class="sub-info-header info-header">
+                    <span>Deaths:</span>
+                </div>
+                <div class="death-count count">
+                    12,045
+                </div>
+            </div>
+
+            <div class="inline">
+                <div class="sub-info-header info-header">
+                    <span>Recovered:</span>
+                </div>
+                <div class="recovered-count count">
+                    21,571
+                </div>
+            </div>
+        </div>
+
+        <div class="search">
+            <form action="{{ url_for('statecases') }}" method="POST">
+                <div class="form-group">
+                    <label for="stateSelect"><h3>Choose your state here:</h3></label>
+                    <select class="form-control" id="stateSelect">
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-lg btn-primary">Primary</button>
+            </form>            
+        </div>
     </div>
 </div>
 
