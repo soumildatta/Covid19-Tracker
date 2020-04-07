@@ -1,0 +1,102 @@
+*, *::before, *::after {
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+} 
+
+html {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(to right, rgba(79, 172, 254, 0.8), rgba(0, 242, 254, 0.8));
+    padding: 0 1.5rem;
+}
+
+.main-card {
+    width: 100%;
+    max-width: 98rem;
+    padding: 5rem;
+    background-color: #eee;
+    box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+}
+
+.image {
+    min-width: 35rem;
+    max-width: 35rem;
+    height: 30rem;
+    transform: translateX(-8rem);
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.8rem;
+    box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0,0,0,0.3);
+}
+
+.date {
+    display: block;
+    color: rgba(0,0,0,0.5);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 0.5rem 0;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: 1.5rem 0.2rem;
+    text-transform: uppercase;
+}
+
+.placeholder {
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    color: rgba(0,0,0,0.7);
+}
+
+@media screen and (max-width: 1068px) {
+    .main-card {
+        max-width: 80rem;
+    }
+
+    .image {
+        min-width: 30rem;
+        max-width: 30rem;
+    }
+}
+
+@media screen and (max-width: 868px) {
+    .main-card {
+        max-width: 70rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-card {
+        padding: 2.5rem;
+        flex-direction: column;
+    }
+
+    .image {
+        min-width: 100%;
+        max-width: 100%;
+        transform: translate(0, -10rem);
+    }
+}
