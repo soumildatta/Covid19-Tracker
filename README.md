@@ -14,6 +14,8 @@ Urllib3 was used to access the [website](https://www.worldometers.info/coronavir
 
 App.py, which is the flask application, gets the returned data from the functions in data.py and then passes the values into the context of the HTML, which then renders them. 
 
+Template inspiration taken from [this video](https://www.youtube.com/watch?v=XRzAZBPp5iQ) by [Julio Codes](https://www.youtube.com/channel/UCeHWTyAKBv_WnW8gsEKGECw).
+
 ---
 ## Get this running on a local machine
 This is a very simple flask application and easy to get running on your local machine by following these steps:
