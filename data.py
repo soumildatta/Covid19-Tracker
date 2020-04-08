@@ -36,8 +36,6 @@ for item in content:
             newcases = item.td.next_sibling.next_sibling.next_sibling.next_sibling.text.strip() 
         deaths = item.td.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text.strip()
 
-        print(newcases)
-
         states.append([name, cases, newcases, deaths])
 
 def getData(stateName):
