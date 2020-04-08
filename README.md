@@ -1,5 +1,7 @@
 # Covid-19 Tracker
-A simple website to track the number of Covid-19 cases in your state. This website is currently able to display information on the 50 states in the USA
+A simple website to track the number of Covid-19 cases in your state. This website is currently able to display information on the 50 states in the USA\
+
+![Imgur](https://i.imgur.com/tCn873p.png)
 
 ## Development 
 This website was made using Flask. The usage of python for this application made it easier to scrape a credible website for the number of cases of Covid-19. 
