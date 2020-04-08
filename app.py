@@ -1,6 +1,7 @@
 # author: Soumil Datta
 
 from flask import Flask, render_template as render, url_for, request
+from data import getData
 
 app = Flask(__name__)
 
