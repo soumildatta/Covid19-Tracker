@@ -13,21 +13,36 @@ uClient.close()
 page_soup = soup(page_html, "html.parser")
 
 containers = page_soup.findAll("table", {"class":"usa_table_countries"})
+total = page_soup.findAll("div", {"id":"maincounter-wrap"})
+
+# main counts 
+total_cases = total[0].span.text.strip()
+total_death = total[1].span.text.strip()
+total_recovered = total[2].span.text.strip()
+
+def getTotal():
+    return total_cases, total_death, total_recovered
+
 
 content = containers[0].tbody.contents
-
 states = []
-
 for item in content:
     if item != "\n":
         name = item.td.text.strip()
         cases = item.td.next_sibling.next_sibling.text.strip()
+        if item.td.next_sibling.next_sibling.next_sibling.next_sibling.text.strip() == "":
+            newcases = "+0"
+        else:
+            newcases = item.td.next_sibling.next_sibling.next_sibling.next_sibling.text.strip() 
         deaths = item.td.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text.strip()
 
-        states.append([name, cases, deaths])
+        print(newcases)
+
+        states.append([name, cases, newcases, deaths])
 
 def getData(stateName):
     for state in states:
         if state[0] == stateName:
-            return state[0], state[1], state[2]
+            return state[0], state[1], state[2], state[3]
 
+getData("Delaware")
