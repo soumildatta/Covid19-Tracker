@@ -18,7 +18,7 @@ def createApp():
         return render("states.html", state=state, total=total, newcases=newcases, death=death)
 
     if __name__ == "__main__":
-        app.run(debug=True)
+        app.run(debug=False)
 
     return app
 
