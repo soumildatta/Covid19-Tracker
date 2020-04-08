@@ -1,18 +1,20 @@
 # author: Soumil Datta
 
 from flask import Flask, render_template as render, url_for, request
-from data import getData
+import data 
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render("index.html")
+    total, death, recovered = data.getTotal()
+    return render("index.html", total=total, death=death, recovered=recovered)
 
 @app.route('/states', methods=['GET', 'POST'])
 def statecases():
     state = request.form['state']
-    return render("testing.html", state=state)
+    _, total, newcases, death = data.getData(state)
+    return render("states.html", state=state, total=total, newcases=newcases, death=death)
 
 if __name__ == "__main__":
     app.run(debug=True)

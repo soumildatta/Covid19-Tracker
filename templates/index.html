@@ -6,7 +6,6 @@
 
 {% block body %}
 
-<div class="main-card">
     <div class="title-box">
         <h1 class="title">Covid-19</h1>
     </div>
@@ -16,7 +15,7 @@
             <span>Number of Cases in the US:</span>
         </div>
         <div class="case-count">
-            <h2>1,344,849</h2>
+            <h2>{{ total }}</h2>
         </div>
 
         <div class="sub-info">
@@ -25,7 +24,7 @@
                     <span>Deaths:</span>
                 </div>
                 <div class="death-count count">
-                    12,045
+                    {{ death }}
                 </div>
             </div>
 
@@ -34,7 +33,7 @@
                     <span>Recovered:</span>
                 </div>
                 <div class="recovered-count count">
-                    21,571
+                    {{ recovered }}
                 </div>
             </div>
         </div>
@@ -100,6 +99,5 @@
             </form>            
         </div>
     </div>
-</div>
 
 {% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="title-box">
+    <h1 class="title">{{ state }}</h1>
+</div>
+
+<div class="info">
+    <div class="info-header">
+        <span>Number of Cases:</span>
+    </div>
+    <div class="case-count">
+        <h2>{{ total }}</h2>
+    </div>
+
+    <div class="sub-info">
+        <div class="inline">
+            <div class="sub-info-header info-header">
+                <span>Deaths:</span>
+            </div>
+            <div class="death-count count">
+                {{ death }}
+            </div>
+        </div>
+
+        <div class="inline">
+            <div class="sub-info-header info-header">
+                <span>New Cases:</span>
+            </div>
+            <div class="recovered-count count">
+                {{ newcases }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="/" class="btn btn-lg btn-primary">Back</a>
+{% endblock %}
