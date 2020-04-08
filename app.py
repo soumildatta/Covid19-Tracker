@@ -8,10 +8,10 @@ app = Flask(__name__)
 def index():
     return render("index.html")
 
-@app.route('/statecases', methods=['POST'])
+@app.route('/states', methods=['GET', 'POST'])
 def statecases():
-    value = request.form
-    return value
+    state = request.form['state']
+    return render("testing.html", state=state)
 
 if __name__ == "__main__":
     app.run(debug=True)
