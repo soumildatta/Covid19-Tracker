@@ -6,7 +6,7 @@ This website was made using Flask. The usage of python for this application made
 The source that was scraped for this website can be found [here](https://www.worldometers.info/coronavirus/country/us/).\
 This website has two pages: 
 * The first page (index.html) displays the total number of cases in the united states, along with the total number of deaths and recoveries. 
-* The second page is accessed by selecting a state from the dropdown. This page displays the number of cases in the chosen state, the number of deaths, and the number of new cases on that particular day.
+* The second page (states.html) is accessed by selecting a state from the dropdown. This page displays the number of cases in the chosen state, the number of deaths, and the number of new cases on that particular day.
 
 Urllib3 was used to access the [website](https://www.worldometers.info/coronavirus/country/us/) and Beautiful Soup was used to parse the HTML that was retrieved by Urllib3. The necessary information was then retrieved from the html and returned by their respective functions in data.py./
 
