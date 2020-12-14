@@ -1,5 +1,5 @@
 # Covid-19 Tracker
-A simple website to track the number of Covid-19 cases in your state. This website is currently able to display information on the 50 states in the USA. The source used for the data is https://www.worldometers.info/coronavirus/country/us/.
+A simple website to track the number of Covid-19 cases in your state. The goal of this website is to display the most important current COVID-19 case information in the United States in an easy to understand UI. This website is currently able to display information on the 50 states in the USA. The source used for the data is https://www.worldometers.info/coronavirus/country/us/.
 
 ![Imgur](https://i.imgur.com/b4XyroH.png)
 
