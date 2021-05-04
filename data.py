@@ -35,18 +35,19 @@ def getData(stateName):
     states = []
     for item in content:
         if item != "\n":
-            name = item.td.text.strip()
-            cases = item.td.next_sibling.next_sibling.text.strip()
-            if item.td.next_sibling.next_sibling.next_sibling.next_sibling.text.strip() == "":
+            # name = item.td.text.strip()
+            name = item.td.next_sibling.next_sibling.text.strip()
+            cases = item.td.next_sibling.next_sibling.next_sibling.next_sibling.text.strip()
+            if item.td.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text.strip() == "":
                 newcases = "+0"
             else:
-                newcases = item.td.next_sibling.next_sibling.next_sibling.next_sibling.text.strip() 
-            deaths = item.td.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text.strip()
+                newcases = item.td.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text.strip()
+            deaths = item.td.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.next_sibling.text.strip()
 
             states.append([name, cases, newcases, deaths])
 
     for state in states:
-        if state[0] == stateName:
+        if state[1] == stateName:
             return state[0], state[1], state[2], state[3]
 
-getData("Delaware")
+# getData("Mississippi")
